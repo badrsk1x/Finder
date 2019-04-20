@@ -1,14 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { render } from "react-dom";
 
-import 'bulma';
+import "bulma";
 
-import './index.css';
+import "./index.css";
 
-import { Main } from './Main.js';
+import Main from "./Main.js";
 
-window.onload = () => {
-    const element = document.createElement("div");
-    document.getElementsByTagName("body")[0].appendChild(element);
-    ReactDOM.render(<Main></Main>, element);
-}
+const element = document.createElement("div");
+document.getElementsByTagName("body")[0].appendChild(element);
+render(<Main />, document.getElementById("App"));
+/*
+const element = document.createElement("div");
+document.getElementsByTagName("body")[0].appendChild(element);
+ReactDOM.render(<Main />, element);
+*/

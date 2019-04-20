@@ -1,12 +1,12 @@
 {
-  "name": "financial-advice",
+  "name": "Job",
   "version": "1.0.0",
   "description": "n/a",
   "private": true,
   "scripts": {
     "build": "webpack -p",
     "clean": "rimraf dist",
-    "develop": "webpack-dev-server -d --hot --watch --content-base dist",
+    "dev": "webpack-dev-server -d --hot --watch --content-base dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,10 +16,16 @@
     "presets": [
       "@babel/preset-env",
       "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties"
+      ]
     ]
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
@@ -42,6 +48,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "bulma": "^0.7.4",
     "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "react-dom": "^16.8.1",
+    "react-router-dom": "^5.0.0"
   }
 }

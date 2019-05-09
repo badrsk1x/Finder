@@ -1,3 +1,6 @@
 html {
-    background-color: #fff;
+  background-color: #fff;
+}
+.active {
+  color: red;
 }

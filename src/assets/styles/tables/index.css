@@ -1,0 +1,17 @@
+.table.is-blackhead tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+table tr td.is-1 {
+  width: 50px;
+  min-width: 50px;
+}
+.table.is-blackhead td {
+  font-size: 13px;
+  vertical-align: middle;
+  text-align: center;
+  border-right: 1px solid #f2f2f2;
+}
+table tr td.is-2 {
+  width: 100px;
+  min-width: 100px;
+}

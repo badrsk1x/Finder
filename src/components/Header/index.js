@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -48,12 +54,13 @@ class Header extends Component {
               </span>
               Home
             </Link>
-            <Link to={"/add"} className="navbar-item">
+
+            <NavLink activeClassName="active" to="/add" className="navbar-item">
               <span className="icon has-text-info is-medium">
                 <FontAwesomeIcon icon={faPlusSquare} size="sm" />
               </span>
               Add
-            </Link>
+            </NavLink>
             <Link to={"/stats"} className="navbar-item">
               <span className="icon has-text-info is-medium">
                 <FontAwesomeIcon icon={faBolt} size="sm" />

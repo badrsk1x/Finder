@@ -1,0 +1,4 @@
+export const ADD_JOB = "ADD_JOB";
+export const FETCH_JOBS_PENDING = "FETCH_JOBS_PENDING";
+export const FETCH_JOBS_SUCCESS = "FETCH_JOBS_SUCCESS";
+export const FETCH_JOBS_ERROR = "FETCH_JOBS_ERROR";

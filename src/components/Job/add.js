@@ -44,6 +44,30 @@ class ConnectedFormAddJob extends Component {
       WhereFound,
       City
     } = this.state;
+
+    fetch("https://myjobapp-7aa71.firebaseio.com/Jobs.json", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: 3,
+        Id: 3,
+        Name
+      })
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (res.error) {
+          throw res.error;
+        }
+        window.location.href = "/";
+      })
+      .catch(error => {
+        console.log(error);
+      });
+
     const Id = uuidv1();
     this.props.addJob({
       Id,

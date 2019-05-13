@@ -42,7 +42,7 @@ class ConnectedJobList extends Component {
 
   render() {
     const { jobs } = this.props;
-
+    console.log("//", typeof jobs);
     return (
       <table className="table is-bordered is-blackhead is-fullwidth research">
         <thead>
@@ -60,7 +60,7 @@ class ConnectedJobList extends Component {
           </tr>
         </thead>
         <tbody>
-          {jobs.map(job => (
+          {Object.values(jobs).map(job => (
             <tr key={job.Id}>
               <td className="is-2">{job.Date}</td>
               <td className="is-2">{job.Name}</td>

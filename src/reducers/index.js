@@ -35,9 +35,9 @@ function rootReducer(state = initialState, action) {
       };
 
     case ADD_JOB:
-      return Object.assign({}, state, {
-        jobs: state.jobs.concat(action.payload)
-      });
+      return {
+        ...state
+      };
   }
   return state;
 }
